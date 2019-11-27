@@ -1,0 +1,19 @@
+<div class="main-body">
+  <div class="main-container">
+    <div class="top-container" fxLayout="row" fxLayoutAlign="space-between center">
+      <app-header></app-header>
+      <div>
+        <button mat-button (click)="switchToPortfolio()">Portfolio</button>
+        <button mat-button (click)="switchToCurriculum()">Curriculum</button>
+        <button mat-icon-button (click)="openGithub()">
+          <img height="24" width="24" src="assets/icons/GitHub-Mark-64px.png" />
+        </button>
+        <button mat-icon-button (click)="openLinkedin()">
+          <img src="assets/icons/iconmonstr-linkedin-3.svg" />
+        </button>
+      </div>
+    </div>
+    <app-portfolio *ngIf="isPortfolio()"></app-portfolio>
+    <app-curriculum *ngIf="isCurriculum()"></app-curriculum>
+  </div>
+</div>

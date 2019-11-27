@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', "Helvetica Neue", sans-serif;
+}
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+  transform: none !important;
+}
+
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config( $font-family: 'Roboto Mono' );
+@include mat-core($custom-typography);
